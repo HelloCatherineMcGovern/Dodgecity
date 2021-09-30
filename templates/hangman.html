@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hangman</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="/static/css/styles.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Rye&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	
+	<!--Start of the Page Header with Title-->
+	<div id="uber_wrapper_header">
+<div id="header-wrapper">
+  <header>
+    <h1 class="header">HANGMAN of Dodge City</h1>
+  </header></div>
+  <li><a href='/'>root</a></li>
+<!--	<div id="uber_wrapper_login">
+    <div id="wrapper_login">
+
+  <p><form action="/hangman" method="POST">
+    <br>              <p>Login to record high score.</p><br>
+    Username
+    <input type="text" name="gameUser">
+    <input type="submit" name="btn_id" value="Login"></input>
+    <input type="submit" name="btn_id" value="Logout"></input>
+    </form>
+  </div></div>-->
+  </div>
+
+
+	<!--END of the Page Header with Title-->
+	
+	<!--Start of the Middle +footer-->
+		<div id="uber_wrapper_body">
+			<div id="wrapper">
+				
+				<!--Middle part-->
+	<div id="middle_wrapper">
+    <nav>
+        <p class="nav_text"><em><strong>Guess the word<br>
+       before the man<br>
+       HANGS!</strong></em></p>
+		<button class="button" onclick="newGame({{allwords}},{{alllevels}},{{allhints}})">New Game</button>
+    <br><br>
+
+    <button class="button" onclick="window.location.href='/manage_words_readuser/{{user}}'">Manage Words</a></button>
+
+    <br>
+    <br>
+	<button class="button" onclick="getHint()">Give me a hint</button>
+    <p id="displayTheHint">Hints are a 20-point penalty.</p>
+    <p>{{errormsg}}</p>
+	</nav>    
+  <main>
+	  <p>Enter a Letter:
+    <input id="letter" type="text" onfocus = "this.value=''">
+    <button id="myBtn" class="button" onclick="guessIt()">Try It!</button>
+    </p><br><br>
+    <hr>
+    <p id="guessword">Click "New Game" to start playing</p>
+    <p id="lettersused"></p>
+    <br><br><br><br>
+    <p id="Messages"></p><br><br>
+  </main>
+  <aside>
+    <figure>
+    <img src="/static/media/6.png" id="hangpics" width="200" height="350" alt="Hang Man">
+    </figure>
+  </aside>
+		</div>
+				
+				<!--End Middle part-->
+  <footer>
+	  <div class="footer_left"><p>Welcome to Hangman!</p>
+      <!--THIS IS THE NAME THAT POPS UP<p id="gameUser">{{user}}</p>-->
+      <form name="highGameScore" action ="/hangman" method="POST">
+        <p>Your High Score is {{score}}</p><br>
+      </form>
+  <!--<button class="button" onclick="showHighScore()">Show my high score</button><p id="highScore"></p>-->
+  <form name = "serchScores" action ="/{{user}}" method = "POST">
+  Search for a User's Score:<br>
+  <input type="submit" name="btn_id" value="Search User"/>
+  <input name="userSearch" id="userSearch"/>
+  <input type="submit" name="btn_id" value="Top Scores"/>
+</form>
+<table id ="scores">
+  {% for user in userinfo %}
+  <tr><td>{{user[0]}}</td><td>------------:</td><td>{{user[1]}}</td></tr>
+  {% endfor %}
+  <tr><td>{{searchUser}}</td><td>{{searchScore}}</td></tr>
+</table>
+	  </div>
+	  <div class="footer_right">
+		  <p>This game's score:</p>
+      <form action ="/{{user}}" method="POST">
+		  <input name="score" id="score" readonly/>
+      <input name="scoreUser" id="scoreUser" value="{{user}}" readonly/>
+      <input type="submit" name="btn_id" value="recordScore"/>
+    </form>
+	  	  </div> 
+  </footer>
+ </div>
+			</div>
+ <script src="/static/scripts/hangman.js"></script>
+ <script>
+  var input = document.getElementById("letter");
+     input.addEventListener("keyup", function(event) {
+     if (event.keyCode === 13) {
+         event.preventDefault();
+         document.getElementById("myBtn").click();
+   }
+ });
+ </script>
+</body>
+</html>
+
+

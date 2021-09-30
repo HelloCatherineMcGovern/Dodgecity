@@ -1,0 +1,249 @@
+@import url(http://fonts.googleapis.com/css?family=Wellfleet);
+/*    font-family: 'Oswald', sans-serif;
+
+    font-family: 'Playfair Display', serif;
+
+    font-family: 'Rye', cursive;*/
+
+@media (min-width: 1px)
+{
+*{ box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+	font-family: 'Oswald', sans-serif;
+    color: #000000;
+    background-color:ffffff;
+}
+	
+	
+
+.footer_left
+{
+	width: 30%;
+	padding: 2em;
+	/*border: .1em solid #000000;*/
+	    font-size: 20px;
+	    font-family: 'Oswald', sans-serif;
+}
+.footer_right
+{
+	width: 30%;
+	padding: 2em;
+		/*border: .1em solid #000000;*/
+	    font-size: 20px;
+	    font-family: 'Oswald', sans-serif;
+	
+}
+
+
+#uber_wrapper_header{
+	width: 100%;
+	background-color: #ffffff;
+}
+
+#uber_wrapper_body{
+	width: 100%;
+	background-color: #F1E1C3;
+}
+
+ 
+#header-wrapper { 
+  
+    background-color:#F1E1C3;
+	height: auto;
+	overflow: auto;
+           
+}
+	#wrapper { 
+  
+    background-color:#F1E1C3;
+	height: auto;
+	overflow: auto;
+           
+}
+#middle_wrapper{ 
+  
+   /* background-color: magenta;*/
+	height: auto;
+	overflow: auto;
+	display: block;
+
+           
+}
+
+nav {
+	margin-top: 2em;
+	width: 100%;
+	height: auto;
+	padding-left: 1em;
+}
+
+.nav_text
+{
+	line-height: 3em;
+}
+#guessword{
+    margin-top: 20px;
+
+}
+#lettersused{
+    margin-top: 20px;
+	
+}
+header { color: #0000000; 
+        background-color: #FFFFFF;
+		background-repeat: no-repeat;		
+        background-size: auto 100%;
+        text-align: left;
+        padding: .5em 0 .5em 5.5em;
+	height: auto;
+	border-bottom: thin black;
+	font-size: 2em;
+}
+main {   /*background-color: #FFFFFF;*/
+        /* color:blue;*/
+         padding: 1em; 
+         margin-top: 15px;
+	height: auto;
+	width: 100%;
+
+}
+aside { text-align: center; 
+width: 100%;}
+footer {  background-color: #F1E1C3;
+         font-size:70%;
+         text-align: left;
+         padding: 0.5em 0;
+	/*border-top:.1em solid #000000;*/
+	border-top:.1em solid #000000;
+	display: flex;
+	justify-content: space-between;
+	
+}
+#hangpics{
+     border-radius: 25px;}
+img { padding: 1em; }
+h2 { color:  #000000; 
+	font-family: 'Oswald', sans-serif;
+}
+h1 { color: #000000; 
+	font-family: 'Oswald', sans-serif;
+	size: 5em;}
+
+h1.header { color: #000000; 
+    font-family: 'Oswald', sans-serif;
+	size: 5em;}
+
+
+hr {color: #000000}
+
+input {
+    width: 90px;
+    border: 2px solid black;
+    margin-right: 30px;
+    height: 30px;
+}
+.button {
+    background-color: #000000;
+    border: none;
+    /*border-radius: 10px;*/
+    color: #F1E1C3;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+	    font-family: 'Oswald', sans-serif;
+	 text-transform: uppercase;
+
+    /*margin: 4px 2px*/;
+    cursor: pointer;
+    padding: 10px 10px 10px 10px;
+}
+nav ul { list-style-type: none;
+         padding-left: 0; 
+
+}
+nav li { text-align: center;
+		 padding-top: .5em;
+		 padding-bottom: .5em;
+}
+
+/* Force older versions of Internet Explorer to display these HTML5 elements with block display. */
+header, nav, main, aside, figure { display: block; }
+}
+
+/* Medium Display */
+@media (min-width: 600px) 
+
+{
+ nav li { display: inline-block;
+          width: 7em;
+          padding: 0.5em;
+		  border: none; 
+         }
+ nav ul { text-align: center; }
+ main { 
+	 
+	 margin-top: 2em;
+	 
+		
+        width: 65%; }
+	nav{
+		width: 20%;
+	}
+	
+	
+  aside {  width: 20%; }
+ footer {  
+	border-top:.1em solid #000000;
+	display: flex;
+	justify-content: space-between;
+}
+	h1 { color: #000000; 
+   font-family: 'Oswald', cursive;
+	size: 10em;}
+ 
+
+#middle_wrapper{ 
+  
+   /* background-color:yellow;*/
+	height: auto;
+	overflow: auto;
+	display: flex;
+	justify-content: space-between;
+
+           
+}
+}
+/* Large Display */
+@media (min-width: 1024px) {
+  nav li { display: block; }
+  nav { float: left; }
+  #wrapper { width: 80%;
+		     margin: auto;
+		     max-width: 1200px;
+	  height: auto;
+  }
+  body { background-color: #FFFFFF; }
+	#big{font-size:xx-large;}
+	h1 { color: #000000; 
+   font-family: 'Oswald', cursive;
+	size: 10em;}
+	
+	p{
+	color: #000000
+}
+	
+	#middle_wrapper{ 
+  
+   /* background-color:greenyellow;*/
+	height: auto;
+	overflow: auto;
+	display: flex;
+	justify-content: space-between;
+
+           
+}
+} 

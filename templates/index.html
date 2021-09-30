@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hangman</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="/static/css/styles.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Rye&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	
+	<!--Start of the Page Header with Title-->
+	<div id="uber_wrapper_header">
+<div id="header-wrapper">
+  <header>
+    <h1 class="header">Welcome to Dodge City Hangman!!</h1>
+	</header></div></div>
+	
+	<!--END of the Page Header with Title-->
+	
+	<!--Start of the Middle +footer-->
+		<div id="uber_wrapper_body">
+			<div id="wrapper">
+				
+				<!--Middle part-->
+	<div id="middle_wrapper">
+    <nav>
+	</nav>    
+  <main>
+	<h1>Login and Play!</h1>
+
+
+
+	<h3>{{errormsg}}</h3>
+	<h3>{{user}}</h3>
+	<h3>{{score}}</h3>
+	<form action="/" method="POST">
+	  <br>        <p>Username</p>
+	  <input type="text" name="user"><br><br>
+	  <input type="submit" name="btn_id" value="Login"/>
+	</form> 
+		</div>
+				
+				<!--End Middle part-->
+  <footer>
+	  <div class="footer_left">
+	  </div>
+	  <div class="footer_right">
+		
+	  	  </div>
+	  
+  </footer>
+ </div>
+			</div>
+
+
+</body>
+</html>
+
+
